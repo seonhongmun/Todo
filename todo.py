@@ -21,6 +21,7 @@ def add_task(task_name):  # add_task를 통해 전달받은 할 일 추가하는
 
 def view_task():  # 할 일 목록 보기
     tasks = load_task() #파일이 있는 경우 안에 내용물이 tasks에 들어가고 없으면 빈 리스트가 들어감
+    print('====================================================')
     if not tasks:  
         print("진행할 일이 없습니다.")  
     else:
@@ -28,6 +29,7 @@ def view_task():  # 할 일 목록 보기
             #enumerate() > idx = 1부터 증가 task = name = 파이썬공부하기, comleted = false
             status = "완료" if task["completed"] else "미완료" # > 키값을 넣으면 자동적으로 반환 (출력 또는 돌려줌) 값을 
             print(f"{idx}. {task['task']} [{status}]")# > 파이썬 공부하기 - 미완료
+    print('====================================================')
 
 def complete_task(task_number): # 할 일 완료
     tasks = load_task() 
