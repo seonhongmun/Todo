@@ -29,12 +29,13 @@ def view_task():  # 할 일 목록보기
             print(f"{idx}. {task['task']} [{status}]")
 
 def complete_task(task_number): # 할 일 완료
-    tasks = load_task() 
-    if 0 < task_number <= len(tasks):
-        tasks[task_number - 1]["completed"] = True
+    tasks = load_task()  
+    if 0 < task_number <= len(tasks): #
+        tasks[task_number - 1]["completed"] = True 
+        #tasks[0] ["completed"] > {name :파이썬 공부하기 , completed : False} completed에 True집어넣음
         save_task(tasks)
-        print(f"'{tasks[task_number - 1]['task']}' 할 일이 완료되었습니다.")
-    else:
+        print(f"할 일 : '{tasks[task_number - 1]['task']}'이(가) 완료되었습니다.") 
+    else: #3번 입력한 경우 잘못된 입력입니다. 출력
         print("잘못된 번호입니다.")
 
 def delete_task(task_number): # 할 일 삭제
