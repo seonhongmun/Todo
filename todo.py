@@ -40,8 +40,9 @@ def complete_task(task_number): # 할 일 완료
 def delete_task(task_number): # 할 일 삭제
     tasks = load_task()
     if 0 < task_number <= len(tasks):
-        removed_task = tasks.pop(task_number - 1)
-        save_task(tasks)
+        removed_task = tasks.pop(task_number - 1) 
+        #index 값 같이 넣어야한다. pop()을 통해서 삭제 및 반환이 되고 삭제가 된 데이터가 remove_task에 들어간다.
+        save_task(tasks) # tasks.pop(task_number-1)로 삭제 => [] 빈리스트
         print(f"'{removed_task['task']}' 할 일이 삭제되었습니다.")
     else:
         print("잘못된 번호입니다.")
