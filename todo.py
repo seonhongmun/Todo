@@ -19,17 +19,14 @@ def add_task(task_name):  # add_task를 통해 전달받은 할 일 추가하는
     save_task(tasks)
     print(f"'{task_name}' 할 일이 추가되었습니다.")
 
-def view_task():  # 할 일 목록 보기
-    tasks = load_task() #파일이 있는 경우 안에 내용물이 tasks에 들어가고 없으면 빈 리스트가 들어감
-    print('====================================================')
+def view_task():  # 할 일 목록보기
+    tasks = load_task() 
     if not tasks:  
-        print("진행할 일이 없습니다.")  
+        print("할 일이 없습니다.")
     else:
-        for idx, task in enumerate(tasks, start=1): 
-            #enumerate() > idx = 1부터 증가 task = name = 파이썬공부하기, comleted = false
-            status = "완료" if task["completed"] else "미완료" # > 키값을 넣으면 자동적으로 반환 (출력 또는 돌려줌) 값을 
-            print(f"{idx}. {task['task']} [{status}]")# > 파이썬 공부하기 - 미완료
-    print('====================================================')
+        for idx, task in enumerate(tasks, start=1):
+            status = "완료" if task["completed"] else "미완료"
+            print(f"{idx}. {task['task']} [{status}]")
 
 def complete_task(task_number): # 할 일 완료
     tasks = load_task()  
@@ -44,8 +41,9 @@ def complete_task(task_number): # 할 일 완료
 def delete_task(task_number): # 할 일 삭제
     tasks = load_task()
     if 0 < task_number <= len(tasks):
-        removed_task = tasks.pop(task_number - 1)
-        save_task(tasks)
+        removed_task = tasks.pop(task_number - 1) 
+        #index 값 같이 넣어야한다. pop()을 통해서 삭제 및 반환이 되고 삭제가 된 데이터가 remove_task에 들어간다.
+        save_task(tasks) # tasks.pop(task_number-1)로 삭제 => [] 빈리스트
         print(f"'{removed_task['task']}' 할 일이 삭제되었습니다.")
     else:
         print("잘못된 번호입니다.")
