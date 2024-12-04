@@ -48,7 +48,7 @@
 ### 설치  
 1. 이 저장소를 클론합니다:  
    ```bash
-   git clone https://github.com/yourusername/task-manager.git
+   git clone https://github.com/seonhongmun/Todo
    cd task-manager
    ```
 
