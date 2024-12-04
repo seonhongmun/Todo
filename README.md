@@ -42,7 +42,7 @@
 - **데이터 영구 저장**: JSON 파일(`tasks.json`)을 사용해 작업 데이터를 저장합니다.  
 
 ---
-![todo](https://github.com/user-attachments/assets/5db8d744-2063-49b0-88f0-3375fe966a2a)
+![Todo](https://github.com/user-attachments/assets/ee54cf5d-a609-4756-8dad-cdaf959fefab)
 
 ## 💻 시작하기  
 
