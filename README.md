@@ -49,7 +49,7 @@
 1. 이 저장소를 클론합니다:  
    ```bash
    git clone https://github.com/seonhongmun/Todo
-   cd task-manager
+   cd Todo
    ```
 
 2. Python을 설치합니다(버전 3.6 이상 권장).
@@ -57,7 +57,7 @@
 ### 애플리케이션 실행  
 Python으로 스크립트를 실행합니다:  
 ```bash
-python task_manager.py
+python todo.py
 ```
 
 ### 사용 예시  
